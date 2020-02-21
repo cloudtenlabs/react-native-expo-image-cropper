@@ -12,8 +12,10 @@
     
    ![image editing tools](tools.png)
    ![Watch the video](crop_mode.png)
-    <a href="https://youtu.be/Zi46ASsb6Eg">Watch Video!</a>
-    <a href="https://exp.host/@wang90925/react-native-expo-image-cropper">Open on your device!</a>
+   <br/>
+   <a href="https://youtu.be/Zi46ASsb6Eg">Watch Video!</a>
+   <br/>
+   <a href="https://exp.host/@wang90925/react-native-expo-image-cropper">Open on your device!</a>
 </p>
 </a>
 </p>
