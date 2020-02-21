@@ -18,11 +18,7 @@
 </p>
 
 ### Install Dependences
-- yarn add react-native-vector-icons
-- expo install expo-permissions
-- expo install expo-image-picker
-- expo install expo-file-system
-- expo install expo-image-manipulator
+- yarn add react-native-expo-image-cropper
 
 ## Example
 
