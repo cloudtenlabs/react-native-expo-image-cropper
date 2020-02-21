@@ -2,7 +2,6 @@
 <p align="center">Multi platform 🚀</p>
 
 <p align="center">
-   <img width="250" src="./demo.gif"/>
    <br/>
    <br/>
    <br/>
