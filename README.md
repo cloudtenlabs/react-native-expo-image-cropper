@@ -11,9 +11,7 @@
    <p align="center">
       ![alt image editing tools](tools.png)
       ![alt Watch the video](crop_mode.png)
-      <br/>
       <a href="https://youtu.be/Zi46ASsb6Eg">Watch Video!</a>
-      <br/>
       <br/>
       <a href="https://exp.host/@wang90925/react-native-expo-image-cropper">Open on your device!</a>
    </p>
