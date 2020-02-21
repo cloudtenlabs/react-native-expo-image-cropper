@@ -5,10 +5,10 @@
    <br/>
    <br/>
    <br/>
-   <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="https://badge.fury.io/js/expo-image-crop.svg"/></a>
-   <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="https://img.shields.io/badge/platform-ios%2Fandroid-blue.svg"/></a>
-   <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="https://img.shields.io/badge/license-MIT-lightgrey.svg"/></a>
-   <p align="center">    
+   <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="https://badge.fury.io/js/expo-image-crop.svg"/>
+   <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="https://img.shields.io/badge/platform-ios%2Fandroid-blue.svg"/>
+   <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="https://img.shields.io/badge/license-MIT-lightgrey.svg"/>
+   <p align="center">
       ![image editing tools](tools.png)
       ![Watch the video](crop_mode.png)
       <br/>
@@ -17,6 +17,7 @@
       <br/>
       <a href="https://exp.host/@wang90925/react-native-expo-image-cropper">Open on your device!</a>
    </p>
+      </a>
 </p>
 
 ### Install Dependences
