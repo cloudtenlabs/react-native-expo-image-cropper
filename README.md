@@ -1,6 +1,5 @@
-<h1 align="center">Expo image manipulator</h1>
-<p align="center">Multi platform 🚀</p>
-
+<h1 align="center">React Native Expo Image Cropper</h1>
+<p align="center">iOS and Android</p>
 <p align="center">
    <br/>
    <br/>
