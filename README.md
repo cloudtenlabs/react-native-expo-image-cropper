@@ -33,7 +33,7 @@ import { ExpoImageManipulator } from 'react-native-expo-image-cropper'
 
 export default class App extends React.Component {
   state = {
-      isVisible: false,
+      showModal: false,
       uri: 'https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png',
   }
   onToggleModal = () => {
