@@ -9,6 +9,8 @@
    <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="https://img.shields.io/badge/platform-ios%2Fandroid-blue.svg"/></a>
    <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="https://img.shields.io/badge/license-MIT-lightgrey.svg"/></a>
    <p align="center">
+         <a href="https://github.com/cloudtenlabs/react-native-expo-image-cropper"><img alt="npm version" src="tools.png"/></a>
+      
       ![alt image editing tools](tools.png)
       
       ![alt Watch the video](crop_mode.png)
