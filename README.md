@@ -14,8 +14,8 @@
       <br/>
       <a href="https://youtu.be/Zi46ASsb6Eg">Watch Video!</a>
       <br/>
-      <a href="https://exp.host/@wang90925/react-native-expo-image-cropper">Open on your device!</a>
    </p>
+   <a href="https://exp.host/@wang90925/react-native-expo-image-cropper">Open on your device!</a>
 </p>
 
 ### Install Dependences
