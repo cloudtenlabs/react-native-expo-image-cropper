@@ -11,6 +11,7 @@
    <p align="center">
     
    ![image editing tools](tools.png)
+   ![cropping mode](crop_mode.png)
    
   <a href="https://exp.host/@wang90925/react-native-expo-image-cropper">Open on your device!</a>
 </p>
