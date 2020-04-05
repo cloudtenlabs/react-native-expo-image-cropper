@@ -1232,9 +1232,9 @@ acorn-jsx@^5.0.0:
   integrity sha512-tMUqwBWfLFbJbizRmEcWSLw6HnFzfdJs2sOJEOwwtVPMoH/0Ay+E703oZz78VSXZiiDcZrQ5XKjPIUQixhmgVw==
 
 acorn@^6.0.7:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.0.tgz#b659d2ffbafa24baf5db1cdbb2c94a983ecd2784"
-  integrity sha512-gac8OEcQ2Li1dxIEWGZzsp2BitJxwkwcOm0zHAJLcPJaVvm58FRnk6RkuLRpU1EujipU2ZFODv2P9DLMfnV8mw==
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
+  integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
 ajv@^6.10.2, ajv@^6.9.1:
   version "6.11.0"
@@ -4809,10 +4809,10 @@ react-native-auto-height-image@^1.0.5:
     prop-types "^15.7.2"
     react-native-android-image-polyfill "^1.0.0"
 
-react-native-expo-image-cropper@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/react-native-expo-image-cropper/-/react-native-expo-image-cropper-0.0.6.tgz#1a9165bccbae8a38b9d788a93c857bf15da33e92"
-  integrity sha512-6oziGr5USt667pc6zWD36kycO7+oImS7dz9SjSAGDyOXAbHKXowfzuYZt1Lo/hlcKaRiSpMam7/9/p9fPS1Y9w==
+react-native-expo-image-cropper@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-expo-image-cropper/-/react-native-expo-image-cropper-1.0.1.tgz#88f541b282c106c5053ca7ef43cab23d3dc0d532"
+  integrity sha512-gM1AavXtq4dpVAVzAwCPqAW+aTs9DODLbrH67zRRJzPMii29FDUzHUtsNTk+uhQqrrORrXmNRdDz4hYg3S4MKQ==
   dependencies:
     babel-eslint "^10.0.1"
     eslint "^5.11.1"
