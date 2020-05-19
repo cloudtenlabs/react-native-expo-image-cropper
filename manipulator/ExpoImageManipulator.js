@@ -310,94 +310,100 @@ class ExpoImageManipulator extends Component {
             this.currentPos.top = cropInitialTop;
             this.currentPos.left = cropInitialLeft;
         }
-        return (
-            <Modal
-                animationType="slide"
-                transparent={true}
-                visible={isVisible}
-                hardwareAccelerated
-                onRequestClose={() => {
-                    this.onToggleModal()
-                }}>
-                <SafeAreaView
-                    style={{width, flexDirection: 'row', backgroundColor: 'black', justifyContent: 'space-between'}}
-                >
-                    <ScrollView scrollEnabled={false} horizontal contentContainerStyle={{width: '100%', paddingHorizontal: 15, height: 44, alignItems: 'center'}}>
-                        {!cropMode ?
-                            <View style={{flexDirection: 'row'}}>
-                                <TouchableOpacity onPress={() => this.onToggleModal()} style={{width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
-                                    <Icon size={24} name={'arrow-left'} color="white" />
-                                </TouchableOpacity>
-                                <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
-                                    <TouchableOpacity onPress={() => this.setState({cropMode: true})} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
-                                        <Image source={require('../assets/crop-free.png')} style={{width: 24, height: 24}}></Image>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.onRotateImage()} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
-                                        <Image source={require('../assets/rotate-left.png')} style={{width: 24, height: 24}}></Image>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.onFlipImage('vertical')} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
-                                        <Image source={require('../assets/flip-vertical.png')} style={{width: 24, height: 24}}></Image>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.onFlipImage('horizontal')} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
-                                        <Image source={require('../assets/flip-horizontal.png')} style={{width: 24, height: 24}}></Image>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => {onPictureChoosed({ uri, base64 }); this.onToggleModal()}} style={{marginLeft: 10, width: 60, height: 32, alignItems: 'center', justifyContent: 'center'}}>
-                                        <Text style={{fontWeight: '500', color: 'white', fontSize: 18}}>{'DONE'}</Text>                                
-                                    </TouchableOpacity>
-                                </View>
-                            </View> : 
-                            <View style={{flexDirection: 'row'}}>
-                                <TouchableOpacity onPress={() => this.setState({cropMode: false})} style={{width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
-                                    <Icon size={24} name={'arrow-left'} color="white" />
-                                </TouchableOpacity>
-                                <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>                                    
-                                    <TouchableOpacity onPress={() => this.onCropImage()} style={{marginRight: 10, width: 60, height: 32, alignItems: 'center', justifyContent: 'center'}}>
-                                        <Text style={{fontWeight: '500', color: 'white', fontSize: 18}}>{processing ? 'Processing' : 'CROP'}</Text>                                
-                                    </TouchableOpacity>
-                                </View>
-                            </View>                            
-                        }
-                    </ScrollView>
-                </SafeAreaView>
-                <View style={{ flex: 1, backgroundColor: 'black' , width: Dimensions.get('window').width }}>
-                    <ScrollView
-                        ref={'imageScrollView'}
-                        style={{ position: 'relative', flex: 1}}
-                        contentContainerStyle={{backgroundColor: 'black'}}
-                        maximumZoomScale={5}
-                        minimumZoomScale={0.5}
-                        onScroll={this.onHandleScroll}
-                        bounces={false}
-                        showsHorizontalScrollIndicator={false}
-                        showsVerticalScrollIndicator={false}
-                        ref={(c) => { this.scrollView = c }}
-                        scrollEventThrottle={16}
-                        scrollEnabled={false}
-                        pinchGestureEnabled={false}
-                        // scrollEnabled={cropMode ? false : true}
-                        // pinchGestureEnabled={cropMode ? false : pinchGestureEnabled}
+        if (uri == undefined) {
+            return (
+                <View></View>
+            )
+        } else {
+            return (
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={isVisible}
+                    hardwareAccelerated
+                    onRequestClose={() => {
+                        this.onToggleModal()
+                    }}>
+                    <SafeAreaView
+                        style={{width, flexDirection: 'row', backgroundColor: 'black', justifyContent: 'space-between'}}
                     >
-                        <AutoHeightImage
-                            style={{ backgroundColor: 'black' }}
-                            source={{ uri }}
-                            resizeMode={imageRatio >= 1 ? "contain" : 'contain'}
-                            width={width}
-                            height={originalHeight}
-                            onLayout={this.calculateMaxSizes}
-                        />
-                        {!!cropMode && (
-                            <ImageCropOverlay onLayoutChanged={(top, left, width, height) => {                                
-                                this.currentSize.width = width;
-                                this.currentSize.height = height;
-                                this.currentPos.top = top
-                                this.currentPos.left = left
-                            }} initialWidth={cropWidth} initialHeight={cropHeight} initialTop={cropInitialTop} initialLeft={cropInitialLeft} minHeight={100} minWidth={100} />
-                        )
-                    }
-                    </ScrollView>
-                </View>
-            </Modal>
-        )
+                        <ScrollView scrollEnabled={false} horizontal contentContainerStyle={{width: '100%', paddingHorizontal: 15, height: 44, alignItems: 'center'}}>
+                            {!cropMode ?
+                                <View style={{flexDirection: 'row'}}>
+                                    <TouchableOpacity onPress={() => this.onToggleModal()} style={{width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                        <Icon size={24} name={'arrow-left'} color="white" />
+                                    </TouchableOpacity>
+                                    <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
+                                        <TouchableOpacity onPress={() => this.setState({cropMode: true})} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                            <Image source={require('../assets/crop-free.png')} style={{width: 24, height: 24}}></Image>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => this.onRotateImage()} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                            <Image source={require('../assets/rotate-left.png')} style={{width: 24, height: 24}}></Image>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => this.onFlipImage('vertical')} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                            <Image source={require('../assets/flip-vertical.png')} style={{width: 24, height: 24}}></Image>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => this.onFlipImage('horizontal')} style={{marginLeft: 10, width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                            <Image source={require('../assets/flip-horizontal.png')} style={{width: 24, height: 24}}></Image>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => {onPictureChoosed({ uri, base64 }); this.onToggleModal()}} style={{marginLeft: 10, width: 60, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                            <Text style={{fontWeight: '500', color: 'white', fontSize: 18}}>{'DONE'}</Text>                                
+                                        </TouchableOpacity>
+                                    </View>
+                                </View> : 
+                                <View style={{flexDirection: 'row'}}>
+                                    <TouchableOpacity onPress={() => this.setState({cropMode: false})} style={{width: 32, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                        <Icon size={24} name={'arrow-left'} color="white" />
+                                    </TouchableOpacity>
+                                    <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>                                    
+                                        <TouchableOpacity onPress={() => this.onCropImage()} style={{marginRight: 10, width: 60, height: 32, alignItems: 'center', justifyContent: 'center'}}>
+                                            <Text style={{fontWeight: '500', color: 'white', fontSize: 18}}>{processing ? 'Processing' : 'CROP'}</Text>                                
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>                            
+                            }
+                        </ScrollView>
+                    </SafeAreaView>
+                    <View style={{ flex: 1, backgroundColor: 'black' , width: Dimensions.get('window').width }}>
+                        <ScrollView
+                            ref={'imageScrollView'}
+                            style={{ position: 'relative', flex: 1}}
+                            contentContainerStyle={{backgroundColor: 'black'}}
+                            maximumZoomScale={5}
+                            minimumZoomScale={0.5}
+                            onScroll={this.onHandleScroll}
+                            bounces={false}
+                            showsHorizontalScrollIndicator={false}
+                            showsVerticalScrollIndicator={false}
+                            ref={(c) => { this.scrollView = c }}
+                            scrollEventThrottle={16}
+                            scrollEnabled={false}
+                            pinchGestureEnabled={false}
+                            // scrollEnabled={cropMode ? false : true}
+                            // pinchGestureEnabled={cropMode ? false : pinchGestureEnabled}
+                        >
+                            <AutoHeightImage
+                                style={{ backgroundColor: 'black' }}
+                                source={{ uri }}
+                                resizeMode={imageRatio >= 1 ? "contain" : 'contain'}
+                                width={width}
+                                height={originalHeight}
+                                onLayout={this.calculateMaxSizes}
+                            />
+                            {!!cropMode && (
+                                <ImageCropOverlay onLayoutChanged={(top, left, width, height) => {                                
+                                    this.currentSize.width = width;
+                                    this.currentSize.height = height;
+                                    this.currentPos.top = top
+                                    this.currentPos.left = left
+                                }} initialWidth={cropWidth} initialHeight={cropHeight} initialTop={cropInitialTop} initialLeft={cropInitialLeft} minHeight={100} minWidth={100} />
+                            )
+                        }
+                        </ScrollView>
+                    </View>
+                </Modal>
+            )
+        }
     }
 }
 
