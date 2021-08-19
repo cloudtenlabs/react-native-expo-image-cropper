@@ -20,8 +20,8 @@ import ImageCropOverlay from '../manipulator/ImageCropOverlay'
 
 const { width, height } = Dimensions.get('window')
 
-LogBox.ignoreWarnings(['componentWillReceiveProps', 'componentWillUpdate', 'componentWillMount']);
-LogBox.ignoreWarnings([
+LogBox.ignoreLogs(['componentWillReceiveProps', 'componentWillUpdate', 'componentWillMount']);
+LogBox.ignoreLogs([
     'Warning: componentWillMount is deprecated',
     'Warning: componentWillReceiveProps is deprecated',
     'Module RCTImageLoader requires',
